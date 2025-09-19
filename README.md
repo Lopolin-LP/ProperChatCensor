@@ -17,9 +17,9 @@ The goal isn't to capture everything. The goal is to make bypassing the filter l
 
 `censor.ts` contains the framework. It's basically like a plugin system: Whenever a message needs censoring, the message is sent out as a string to all engines currently hooked into the censorer. Each engine writes it's own report for what it thinks is wrong with the message, where it's wrong, and what level of punishment to give. Engines can also say that specific parts are 100% fine, and overwrite the negative results of other engines or itself. All results are then combined, engines can optionally remove other reports if they know they're gonna be wrong, any whitelist-blacklist conflicts resolved (by removing all blacklists for each character where there is at least one whitelist), any now orphaned reports removed and then the censoring is applied.
 
-This framework allows as you might guess for as many different engines to look at a message and complain in their own ways. There might be engines, checking for profanity bypasses based on unicode manipulation. Others might check for insults through context. The next one might be an LLM that does its own checks, who the hell knows what you're hooking up to it?
+This framework allows, as you might guess, for as many different engines to look at a message and complain in their own ways. There might be engines checking for profanity bypasses based on unicode manipulation. Others might check for insults through context. The next one might be an LLM that does its own checks. Who the hell knows what you're hooking into it?
 
-This should allow MAXIMUM flexibility with how the chat is censored. There is a roadmap, however if I feel like implementing it, is a different question.
+This should allow MAXIMUM flexibility with how the chat is censored. Though being very alpha-like software, there is a roadmap. However it heavily depends on if I feel like programming on this.
 
 # Roadmap
 ## Front-End usefulness
@@ -40,7 +40,13 @@ This should allow MAXIMUM flexibility with how the chat is censored. There is a 
   - [ ] use `toLatin` and `toCyrillic`
     - [ ] and make use of symbols as replacement characters too
 - [ ] Add a percentage based engine
-  - [ ] Like how much of this word is it similar to a profanity word?
+  - Like how much of this word is it similar to a profanity word?
+
+## Structure
+- [ ] Make data-folder more structured and useful and not a dumping ground for everything
+
+## GitHub
+- [ ] Automatic typescript compilation...?
 
 # Credits
 - Englisch Profanity: https://github.com/coffee-and-fun/google-profanity-words/blob/main/data/en.txt

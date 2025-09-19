@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ProperChatCensor</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="module" src="./build/app.js"></script>
+    <link rel="icon" href="icon.jpg">
+</head>
+<body>
+    <section class="no-style" id="title">
+        <h1>ProperChatCensor</h1>
+        <p>...because nobody gets it right</p>
+        <p><small>(pre-alpha, none of this is working well)</small></p>
+        <div id="shadow"></div>
+    </section>
+    <form action="javascript:;" id="main">
+        <section class="no-style" id="msglog-parent">
+            <div id="msglog">
+            </div>
+        </section>
+        <div class="title-below">Message History</div>
+        <section>
+            <div class="title-below">Preview</div>
+            <p id="output"></p>
+        </section>
+        <input type="text" id="message" autocomplete="off" placeholder="Message..." autofocus>
+    </form>
+</body>
+</html>

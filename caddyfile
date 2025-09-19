@@ -1,0 +1,9 @@
+{
+	http_port 8079
+	# https_port 8079
+}
+
+127.0.0.1:8079 {
+	root ./
+	file_server
+}
